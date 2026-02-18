@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveCo — Your Playful Couples App</title>
+    <meta name="description" content="Stay connected with your partner through hand-drawn doodles, shared habits, couple games, and home screen widgets. One app, two hearts.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Love<span>Co</span></a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="container hero-content">
+        <div class="hero-badge">For Couples Who Play Together</div>
+        <h1>Tiny Moments,<br><span>Big Love</span></h1>
+        <p class="hero-subtitle">
+            Send hand-drawn love notes, build habits together, play couple games, and see it all on your home screen. One app for two hearts.
+        </p>
+        <div class="hero-cta">
+            <a href="https://apps.apple.com/app/loveco" class="app-store-badge" aria-label="Download on the App Store">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="54">
+            </a>
+        </div>
+        <p class="text-muted" style="font-size:14px; margin-top:12px;">Free to download. LoveCo Gold available.</p>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features">
+    <div class="container">
+        <h2 class="text-center">Everything You Need to<br>Stay Close</h2>
+
+        <div class="features-grid">
+            <div class="card feature-card">
+                <div class="feature-icon" style="background: rgba(224,187,228,0.2);">🎨</div>
+                <h3>Doodles & Love Notes</h3>
+                <p>Draw personalized love notes that appear right on your partner's home screen widget.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-icon" style="background: rgba(126,200,227,0.2);">🔥</div>
+                <h3>Habits & Streaks</h3>
+                <p>Build daily rituals together. Track streaks and celebrate wins as a team.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-icon" style="background: rgba(255,111,97,0.15);">🎮</div>
+                <h3>Couple Games</h3>
+                <p>"Would You Rather", deep talks, weekly check-ins. Earn Love Points together!</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-icon" style="background: rgba(224,187,228,0.2);">📱</div>
+                <h3>Home Screen Widget</h3>
+                <p>See your partner's latest doodle and mood right on your home screen. Always connected.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-icon" style="background: rgba(126,200,227,0.2);">⭐</div>
+                <h3>Plans & Memories</h3>
+                <p>Shared bucket lists, date night ideas, and a memory vault for your best moments.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-icon" style="background: rgba(255,111,97,0.15);">😊</div>
+                <h3>Daily Mood Check-In</h3>
+                <p>Share how you're feeling with a quick emoji. Stay in tune with each other.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing">
+    <div class="container">
+        <h2>One Subscription.<br>Both of You.</h2>
+        <p class="text-muted" style="max-width:480px; margin: 12px auto 0;">
+            LoveCo Gold covers both partners. When one subscribes, your partner gets Gold too.
+        </p>
+
+        <div class="pricing-cards">
+            <div class="card pricing-card featured">
+                <p style="font-weight:600; color: var(--text-muted); margin-bottom:8px;">Yearly</p>
+                <div class="price">$39.99</div>
+                <div class="price-period">per year</div>
+                <p style="font-size:14px; margin-top:12px; color:var(--coral); font-weight:600;">Save 89% vs. weekly</p>
+                <ul style="text-align:left; margin-top:20px; list-style:none; padding:0;">
+                    <li style="padding:6px 0; font-size:15px;">✓ Unlimited doodles</li>
+                    <li style="padding:6px 0; font-size:15px;">✓ Unlimited habits & plans</li>
+                    <li style="padding:6px 0; font-size:15px;">✓ All games unlocked</li>
+                    <li style="padding:6px 0; font-size:15px;">✓ Premium widget themes</li>
+                    <li style="padding:6px 0; font-size:15px;">✓ Covers both partners</li>
+                </ul>
+            </div>
+            <div class="card pricing-card">
+                <p style="font-weight:600; color: var(--text-muted); margin-bottom:8px;">Weekly</p>
+                <div class="price">$6.99</div>
+                <div class="price-period">per week</div>
+                <p style="font-size:14px; margin-top:12px; color:var(--teal-dark); font-weight:600;">7-day free trial</p>
+                <ul style="text-align:left; margin-top:20px; list-style:none; padding:0;">
+                    <li style="padding:6px 0; font-size:15px;">✓ All Gold features</li>
+                    <li style="padding:6px 0; font-size:15px;">✓ Try free for 7 days</li>
+                    <li style="padding:6px 0; font-size:15px;">✓ Cancel anytime</li>
+                </ul>
+            </div>
+        </div>
+
+        <p style="font-size:13px; color:var(--text-muted); margin-top:32px; max-width:520px; margin-left:auto; margin-right:auto;">
+            Subscription auto-renews unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple ID account.
+        </p>
+    </div>
+</section>
+
+<!-- Download CTA -->
+<section style="padding: 80px 0; text-align: center;">
+    <div class="container">
+        <h2>Ready to Get Closer?</h2>
+        <p class="text-muted" style="margin: 12px auto 28px; max-width:400px;">Download LoveCo and start your journey together.</p>
+        <a href="https://apps.apple.com/app/loveco" class="app-store-badge">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="54">
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <p class="footer-copy">&copy; 2025 LoveCo. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="support.html">Support</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

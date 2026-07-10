@@ -87,12 +87,12 @@
 
     if (code) {
         codeEl.textContent = code;
-        // If the app IS installed, iOS normally intercepts this URL before
-        // Safari ever loads it. If we're rendering, the app is probably not
-        // installed — but offer the universal-link retry anyway (covers the
-        // "opened in browser via long-press" case).
+        // Custom scheme, NOT the universal link: tapping a universal
+        // link on the same page in Safari just reloads the page. The
+        // loveco:// scheme hands off to the app directly (and no-ops
+        // if the app isn't installed).
         openApp.style.display = "inline";
-        openApp.href = "https://getloveco.com/pair.html?c=" + code;
+        openApp.href = "loveco://pair?c=" + code;
     } else {
         codeEl.textContent = "——————";
         cta.textContent = "Get the app";

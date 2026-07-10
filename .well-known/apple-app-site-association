@@ -1,0 +1,18 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["6K7JWKMZF8.com.loveco"],
+        "appID": "6K7JWKMZF8.com.loveco",
+        "paths": ["/pair*"],
+        "components": [
+          {
+            "/": "/pair*",
+            "comment": "Pair invite links: /pair.html?c=CODE and future /pair/CODE"
+          }
+        ]
+      }
+    ]
+  }
+}

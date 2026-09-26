@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're invited to LoveCo</title>
+<meta name="description" content="Your partner invited you to LoveCo: doodles, photos and a question a day, straight to each other's home screens.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>">
+<style>
+  :root { --ink:#1E1A44; --sub:#5F5A86; --pink:#FF4F8B; }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; font-family:'Rubik',system-ui,sans-serif; color:var(--ink);
+         background:linear-gradient(180deg,#B9C0FF 0%,#D9CCFF 45%,#F7D6E6 100%); display:flex; justify-content:center; }
+  .wrap { width:100%; max-width:420px; padding:40px 20px 32px; display:flex; flex-direction:column; gap:16px; }
+  .env { font-size:64px; text-align:center; }
+  h1 { font-weight:800; font-size:30px; line-height:1.15; margin:0; text-align:center; }
+  p { font-weight:500; color:var(--sub); font-size:16px; line-height:1.45; margin:0; text-align:center; }
+  .card { background:#fff; border:3px solid var(--ink); border-radius:22px; box-shadow:0 5px 0 var(--ink); padding:16px; }
+  .step { font-weight:700; font-size:13px; color:var(--sub); margin-bottom:8px; }
+  .btn { display:block; width:100%; text-align:center; text-decoration:none; font-weight:800; font-size:18px; color:var(--ink);
+         background:var(--pink); border:3px solid var(--ink); border-radius:18px; box-shadow:0 4px 0 var(--ink); padding:14px; cursor:pointer; font-family:inherit; }
+  .btn.alt { background:#fff; }
+  .note { font-size:13px; min-height:18px; color:var(--sub); text-align:center; margin-top:8px; }
+  .small { font-size:13.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="env">💌</div>
+  <h1>Your partner is waiting for you on LoveCo</h1>
+  <p>Send each other doodles, photos and a question a day, straight to each other's home screens.</p>
+
+  <div class="card">
+    <div class="step">Step 1</div>
+    <button class="btn" id="get">Get LoveCo</button>
+    <div class="note" id="copied"></div>
+  </div>
+
+  <div class="card">
+    <div class="step">Step 2, once it's installed</div>
+    <a class="btn alt" id="open" href="#">Open my invite</a>
+  </div>
+
+  <p class="small">Or open LoveCo, tap "Got an invite from your partner?", then Paste link. We copy the link for you in step 1.</p>
+</div>
+<script>
+(function () {
+  var APP_STORE = "https://apps.apple.com/app/loveco/id6757470996";
+  var t = new URLSearchParams(location.search).get("t") || "";
+  if (!/^[A-Za-z0-9]{6,16}$/.test(t)) t = "";
+  var link = t ? "https://getloveco.com/pair/" + t : "";
+  var open = document.getElementById("open");
+  // Custom scheme, not the universal link: a universal link tapped on its own domain just reloads this page.
+  if (t) open.href = "loveco://pair/" + t; else open.style.display = "none";
+  document.getElementById("get").addEventListener("click", function () {
+    var go = function () { location.href = APP_STORE; };
+    if (link && navigator.clipboard) {
+      navigator.clipboard.writeText(link).then(function () {
+        document.getElementById("copied").textContent = "Invite link copied. See you inside 💛";
+        setTimeout(go, 500);
+      }).catch(go);
+    } else { go(); }
+  });
+})();
+</script>
+</body>
+</html>

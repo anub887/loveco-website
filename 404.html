@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LoveCo</title>
+<meta name="robots" content="noindex">
+<script>
+// GitHub Pages serves this page for any unknown path. Invite links look like /pair/<token>:
+// 6 digits = old app code (pair.html), anything else = new LoveCo invite (invite.html).
+(function () {
+  var m = location.pathname.match(/^\/pair\/([A-Za-z0-9]{6,16})\/?$/);
+  if (!m) return;
+  var t = m[1];
+  location.replace(/^\d{6}$/.test(t) ? "/pair.html?c=" + t : "/invite.html?t=" + encodeURIComponent(t));
+})();
+</script>
+<style>body{font-family:system-ui,sans-serif;background:#D9CCFF;color:#1E1A44;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0;text-align:center;padding:24px}a{color:#FF4F8B}</style>
+</head>
+<body><div><h1>Page not found</h1><p><a href="/">Go to LoveCo</a></p></div></body>
+</html>

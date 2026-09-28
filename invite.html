@@ -32,19 +32,12 @@
   <div class="env">💌</div>
   <h1>Your partner is waiting for you on LoveCo</h1>
   <p>Send each other doodles, photos and a question a day, straight to each other's home screens.</p>
-
   <div class="card">
-    <div class="step">Step 1</div>
     <button class="btn" id="get">Get LoveCo</button>
-    <div class="note" id="copied"></div>
+    <div class="note" id="copied">We copy your invite, so LoveCo opens it for you after installing.</div>
   </div>
-
-  <div class="card">
-    <div class="step">Step 2, once it's installed</div>
-    <a class="btn alt" id="open" href="#">Open my invite</a>
-  </div>
-
-  <p class="small">Or open LoveCo, tap "Got an invite from your partner?", then Paste link. We copy the link for you in step 1.</p>
+  <p class="small">Already have LoveCo? <a href="#" id="open" style="color:var(--ink);font-weight:700">Open my invite</a></p>
+  <p class="small" id="first" style="display:none;color:var(--ink);font-weight:700">Get LoveCo first, then come back and tap here. Your invite is waiting.</p>
 </div>
 <script>
 (function () {
@@ -52,14 +45,26 @@
   var t = new URLSearchParams(location.search).get("t") || "";
   if (!/^[A-Za-z0-9]{6,16}$/.test(t)) t = "";
   var link = t ? "https://getloveco.com/pair/" + t : "";
+  // invite_link_opened (web, MEASUREMENT.md). Counts only: no names, no content.
+  try {
+    fetch("https://us.i.posthog.com/capture/", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
+      body: JSON.stringify({ api_key: "phc_rEZVZE4tebhaqsbaAHk4pAmu4sqx43abPQZCAMueVZCg", event: "invite_link_opened",
+        distinct_id: "web-" + (t || "none"), properties: { has_token: !!t, $current_url: location.origin + location.pathname } }) });
+  } catch (e) {}
   var open = document.getElementById("open");
-  // Custom scheme, not the universal link: a universal link tapped on its own domain just reloads this page.
-  if (t) open.href = "loveco://pair/" + t; else open.style.display = "none";
+  if (!t) open.parentNode.style.display = "none";
+  // Custom scheme (a universal link tapped on its own domain just reloads this page). Without the app
+  // installed nothing happens, so after a moment we say so instead of leaving a dead end.
+  open.addEventListener("click", function (e) {
+    e.preventDefault();
+    location.href = "loveco://pair/" + t;
+    setTimeout(function () { if (!document.hidden) document.getElementById("first").style.display = "block"; }, 1500);
+  });
   document.getElementById("get").addEventListener("click", function () {
     var go = function () { location.href = APP_STORE; };
     if (link && navigator.clipboard) {
       navigator.clipboard.writeText(link).then(function () {
-        document.getElementById("copied").textContent = "Invite link copied. See you inside 💛";
+        document.getElementById("copied").textContent = "Invite copied. See you inside 💛";
         setTimeout(go, 500);
       }).catch(go);
     } else { go(); }

@@ -319,3 +319,11 @@ footer a{text-decoration:none;color:var(--sub);font-weight:600}footer a:hover{co
   .hero .float-stk:nth-child(3){left:-6%!important;bottom:2%!important}
   #heroDemo{min-height:520px!important}
 }
+
+/* what's different */
+.diff{display:grid;gap:16px}
+@media (min-width:700px){.diff{grid-template-columns:1fr 1fr}}
+@media (min-width:1040px){.diff{grid-template-columns:repeat(4,1fr)}}
+.diff .stk-card{padding:18px 20px 22px;display:grid;gap:8px;align-content:start}
+.diff .astk{margin:-6px 0 -4px -6px}
+.diff p{color:var(--sub);font-size:16px}

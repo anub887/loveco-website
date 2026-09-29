@@ -102,9 +102,7 @@
   if (wall) {
     const order = ['sob', 'melt', 'sideeye', 'flop', 'hug', 'sign', 'judging', 'unhinged', 'satchel', 'crash', 'notes', 'signown'];
     wall.innerHTML = order.map((k, i) => {
-      const free = C.FREE.includes(k);
-      return `<button class="st stk-card rv${i % 3 ? ' d' + (i % 3) : ''}" type="button" aria-label="${C.NAMES[k]} Coo, ${free ? 'free' : 'Plus'}">
-        <span class="tag${free ? '' : ' plus'}">${free ? 'Free' : 'Plus'}</span>${C.astk(k, 140)}<b>${C.NAMES[k]}</b><small>${C.WHAT[k]}</small></button>`;
+      return `<button class="st stk-card rv${i % 3 ? ' d' + (i % 3) : ''}" type="button" aria-label="${C.NAMES[k]} Coo">${C.astk(k, 140)}<b>${C.NAMES[k]}</b><small>${C.WHAT[k]}</small></button>`;
     }).join('');
     wall.addEventListener('click', e => {
       const b = e.target.closest('.st'); if (!b) return;

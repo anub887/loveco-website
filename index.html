@@ -1,161 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoveCo — Stay close, every day.</title>
-    <meta name="description" content="A shared space for the two of you. Daily prompts, hand-drawn heartbeats, live photos to their home screen, async games, and home-screen widgets. One app, two hearts.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LoveCo: little moments for two, carried by Coo</title>
+<meta name="description" content="The couples app for doodles on your partner's Home Screen, a question you both answer, games you play apart and compare together, hugs, letters and Coo, the tiny dove who carries it all. Free to start. One Plus covers you both.">
+<meta property="og:title" content="LoveCo: little moments for two">
+<meta property="og:description" content="Doodles on their Home Screen, a question you both answer, games, hugs, letters and Coo, the tiny carrier dove.">
+<meta property="og:url" content="https://getloveco.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#E4DEFF">
+<meta name="apple-itunes-app" content="app-id=6757470996">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%95%8A%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="coo-anim.css">
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="nav">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Love<span>Co</span></a>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            <li><a href="support.html">Support</a></li>
-        </ul>
-    </div>
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="LoveCo home"><span data-coo="head" aria-hidden="true"></span><span>Love<em>Co</em></span></a>
+    <ul>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#stickers">Stickers</a></li>
+      <li><a href="#plus">Plus</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a class="btn" href="https://apps.apple.com/app/loveco/id6757470996">Get LoveCo</a>
+  </div>
 </nav>
 
-<!-- Hero -->
-<section class="hero">
-    <div class="container hero-content">
-        <div class="hero-badge">Built for two</div>
-        <h1>Stay close,<br><span>every day.</span></h1>
-        <p class="hero-subtitle">
-            A shared space for the two of you. Daily prompts that go deeper than "how was your day," hand-drawn heartbeats that land on their home screen, async games you play at your own pace, and widgets that keep them with you.
-        </p>
-        <div class="hero-cta">
-            <a href="https://apps.apple.com/app/loveco/id6757470996" class="app-store-badge" aria-label="Download on the App Store">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="54">
-            </a>
-        </div>
-        <p style="font-size:13px; margin-top:14px; color: var(--text-tertiary); font-family: var(--font-mono); letter-spacing: 0.6px; text-transform: uppercase;">Free to download · Premium available · One subscription, both of you</p>
-    </div>
-</section>
-
-<!-- Features -->
-<section class="features">
-    <div class="container">
-        <h2 class="text-center">Everything you need to<br>stay close.</h2>
-
-        <div class="features-grid">
-            <div class="card feature-card">
-                <div class="feature-icon" style="background: rgba(212,90,120,0.18); color: var(--rose);">💬</div>
-                <h3>Daily Connection</h3>
-                <p>A new prompt every day, three ways to answer — typed, photo, or heartbeat. Both sides reveal once you've both replied.</p>
-            </div>
-            <div class="card feature-card">
-                <div class="feature-icon" style="background: rgba(217,185,118,0.16);">💌</div>
-                <h3>Heartbeats</h3>
-                <p>Hand-drawn doodles, live photos, and quick notes that land straight on their home screen widget.</p>
-            </div>
-            <div class="card feature-card">
-                <div class="feature-icon" style="background: rgba(124,169,199,0.18);">🎮</div>
-                <h3>Async Games</h3>
-                <p>Would You Rather, This or That, Quiz, Predict Each Other, Two-Vote — play at your own pace. Reveal answers when you've both played.</p>
-            </div>
-            <div class="card feature-card">
-                <div class="feature-icon" style="background: rgba(200,98,58,0.18);">📅</div>
-                <h3>Plans &amp; Countdowns</h3>
-                <p>The trip, the dinner, the surprise. Live-ticking countdown on your home screen so it always feels close.</p>
-            </div>
-            <div class="card feature-card">
-                <div class="feature-icon" style="background: rgba(156,184,127,0.18);">🔥</div>
-                <h3>Habits &amp; Streaks</h3>
-                <p>Build small daily rituals together. Streak only counts when you both show up.</p>
-            </div>
-            <div class="card feature-card">
-                <div class="feature-icon" style="background: rgba(212,90,120,0.18);">📱</div>
-                <h3>Home Screen Widgets</h3>
-                <p>Latest heartbeat, mood, days together, next plan countdown — pick the one you want with you all day.</p>
-            </div>
-            <div class="card feature-card">
-                <div class="feature-icon" style="background: rgba(217,185,118,0.16);">📚</div>
-                <h3>Together Feed</h3>
-                <p>Everything you've made, in order. Q&amp;As, heartbeats, photo replies, milestones — your shared timeline.</p>
-            </div>
-            <div class="card feature-card">
-                <div class="feature-icon" style="background: rgba(124,169,199,0.18);">😊</div>
-                <h3>Mood Check-In</h3>
-                <p>Share how you're feeling with a quick emoji. See it instantly on each other's Us card and widget.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pricing -->
-<section class="pricing">
-    <div class="container">
-        <h2>One subscription.<br>Both of you.</h2>
-        <p class="text-muted" style="max-width:480px; margin: 12px auto 0;">
-            LoveCo Premium covers both partners. When one of you subscribes, your partner gets Premium too — no extra cost.
-        </p>
-
-        <div class="pricing-cards">
-            <div class="card pricing-card featured">
-                <p style="font-family: var(--font-mono); font-size: 12px; color: var(--text-tertiary); letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 10px;">Yearly</p>
-                <div class="price">$39.99</div>
-                <div class="price-period">per year</div>
-                <p style="font-size:13px; margin-top:14px; color: var(--rose); font-weight: 600;">7-day free trial · Save 89% vs. weekly</p>
-                <ul style="text-align:left; margin-top:22px; list-style:none; padding:0;">
-                    <li style="padding:6px 0; font-size:14px; color: var(--text-primary);">✓ Unlimited heartbeats — drawn, photo, note</li>
-                    <li style="padding:6px 0; font-size:14px; color: var(--text-primary);">✓ Every daily prompt &mdash; type, photo, or heartbeat</li>
-                    <li style="padding:6px 0; font-size:14px; color: var(--text-primary);">✓ Every game pack, every async session</li>
-                    <li style="padding:6px 0; font-size:14px; color: var(--text-primary);">✓ Unlimited plans &amp; habits</li>
-                    <li style="padding:6px 0; font-size:14px; color: var(--text-primary);">✓ Covers both partners</li>
-                </ul>
-            </div>
-            <div class="card pricing-card">
-                <p style="font-family: var(--font-mono); font-size: 12px; color: var(--text-tertiary); letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 10px;">Weekly</p>
-                <div class="price">$6.99</div>
-                <div class="price-period">per week</div>
-                <p style="font-size:13px; margin-top:14px; color: var(--text-secondary); font-weight: 600;">No trial · Cancel anytime</p>
-                <ul style="text-align:left; margin-top:22px; list-style:none; padding:0;">
-                    <li style="padding:6px 0; font-size:14px; color: var(--text-primary);">✓ All Premium features</li>
-                    <li style="padding:6px 0; font-size:14px; color: var(--text-primary);">✓ Renews weekly</li>
-                    <li style="padding:6px 0; font-size:14px; color: var(--text-primary);">✓ Cancel anytime</li>
-                </ul>
-            </div>
-        </div>
-
-        <p style="font-size:12px; color: var(--text-tertiary); margin-top:36px; max-width:540px; margin-left:auto; margin-right:auto; line-height: 1.6;">
-            Subscription auto-renews unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple ID account. The 7-day free trial converts to a paid yearly subscription unless cancelled before it ends.
-        </p>
-    </div>
-</section>
-
-<!-- Download CTA -->
-<section style="padding: 80px 0; text-align: center;">
-    <div class="container">
-        <h2>Ready to Get Closer?</h2>
-        <p class="text-muted" style="margin: 12px auto 28px; max-width:400px;">Download LoveCo and start your journey together.</p>
-        <a href="https://apps.apple.com/app/loveco/id6757470996" class="app-store-badge">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" height="54">
+<header class="hero" id="top">
+  <div class="clouds" aria-hidden="true" id="clouds"></div>
+  <div class="wrap">
+    <div>
+      <span class="kick">The couples app with a tiny carrier dove</span>
+      <h1 style="margin-top:14px">Little moments,<br><span class="pink">carried by Coo.</span></h1>
+      <p class="lede">Send a doodle to your partner's Home Screen. Answer a question together. Play a game apart, then laugh at the results. Coo flies it all over and grows up with you two.</p>
+      <div class="cta-row">
+        <a class="appstore" href="https://apps.apple.com/app/loveco/id6757470996" aria-label="Download LoveCo on the App Store">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.05-.52 2.69-1.28z"/></svg>
+          <span><small>Download on the</small><b>App Store</b></span>
         </a>
+        <span class="fine">Free to start · One Plus covers you both</span>
+      </div>
     </div>
+
+    <div class="demo" id="heroDemo" style="min-height:560px">
+      <div class="float-stk" data-depth="18" style="left:0;top:4%"><span data-astk="sob" data-px="110"></span></div>
+      <div class="float-stk" data-depth="-14" style="right:0;top:10%"><span data-astk="sideeye" data-px="104"></span></div>
+      <div class="float-stk" data-depth="22" style="left:2%;bottom:6%"><span data-astk="hug" data-px="112"></span></div>
+      <div class="phone" id="heroPhone">
+        <div class="screen">
+          <div class="chips">
+            <span class="chip"><span class="av">S</span><span>Sana ›<small>7:42 pm her time</small></span></span>
+            <span class="chip"><span class="av me">A</span><span>You<small>Set status</small></span></span>
+          </div>
+          <div class="bubble tail swap" id="heroBubble">
+            <span class="bl" id="heroLabel">today's question</span>
+            <div class="bt" id="heroTitle">What's a tiny thing I do that you secretly love?</div>
+            <span class="mini" id="heroBtn">Answer</span>
+          </div>
+          <div class="stage"><div class="cw" id="heroCoo"></div></div>
+          <div class="growth">
+            <div class="gt">Baby Coo → Little Coo <span id="growN">22 / 30</span></div>
+            <div class="track"><i id="growBar"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="flyer" id="flyer" aria-hidden="true"></div>
+    </div>
+  </div>
+</header>
+
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kick">How it works</span>
+      <h2>Two phones. One tiny dove.</h2>
+      <p class="lede" style="margin-inline:auto">No feed to scroll, no streak to protect. Just small things you send each other, whenever the moment hits.</p>
+    </div>
+    <div class="steps">
+      <div class="step stk-card rv"><span class="n">1</span><h3>Pair with one link</h3><p>Draw your partner a first doodle and send your invite. When they open it, Coo hatches for the two of you.</p></div>
+      <div class="step stk-card rv d1"><span class="n">2</span><h3>Send the little things</h3><p>Doodles, photos, hugs, answers, games, letters. Coo carries each one to their phone, their Home Screen and their Lock Screen.</p></div>
+      <div class="step stk-card rv d2"><span class="n">3</span><h3>Watch Coo grow</h3><p>Everything you share helps Coo grow from an egg to a proud grown dove, and fills Our home with your memories.</p></div>
+    </div>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-inner">
-        <p class="footer-copy">&copy; 2026 LoveCo. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
-            <li><a href="support.html">Support</a></li>
-        </ul>
+<section style="padding-top:20px">
+  <div class="wrap">
+
+    <div class="feat" data-play>
+      <div class="copy rv">
+        <span class="kick">Doodles &amp; photos</span>
+        <h2>An inside joke, delivered.</h2>
+        <p>Draw something only they would get and it lands on their Home Screen widget. They open it, react, and draw one back.</p>
+        <ul><li>Unlimited doodles and photos, free</li><li>Home Screen and Lock Screen widgets</li><li>"Draw back" to keep the joke going</li></ul>
+      </div>
+      <div class="demo">
+        <div class="phone">
+          <div class="screen">
+            <div class="bubble" style="padding:9px 12px"><span class="bl">drawing for Sana</span></div>
+            <div class="pad">
+              <svg viewBox="0 0 240 300" aria-hidden="true">
+                <path pathLength="1" class="ink-path" d="M120 210C60 170 40 130 60 100C78 74 108 84 120 110C132 84 162 74 180 100C200 130 180 170 120 210Z"/>
+                <path pathLength="1" class="ink-path dark p2" d="M34 232v16q0 12 11 12q11 0 11-12v-16M96 232v16q0 12 11 12q11 0 11-12v-16M138 232v44M138 240q8-10 18-6q10 6 2 18q-8 8-20 2"/>
+                <path pathLength="1" class="ink-path dark p3" d="M176 238q4-12 16-10q12 4 4 16q-8 6-8 14M188 272v2"/>
+                <path pathLength="1" class="ink-path dark p4" d="M196 70l6 -12M210 80l12 -6M200 92l14 2"/>
+              </svg>
+              <span class="toast">On Sana's home screen now ✓</span>
+            </div>
+          </div>
+        </div>
+        <div class="widget" aria-hidden="true">
+          <svg viewBox="0 0 240 240"><rect width="240" height="240" fill="#fff"/><path d="M120 170C70 138 54 106 70 82C84 62 108 70 120 92C132 70 156 62 170 82C186 106 170 138 120 170Z" fill="none" stroke="#FF4F8B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <em>from Anubhav</em>
+        </div>
+      </div>
     </div>
+
+    <div class="feat flip" data-play>
+      <div class="copy rv">
+        <span class="kick">Questions</span>
+        <h2>Ask once. Hear two stories.</h2>
+        <p>Answer a question about the two of you. Neither answer opens until you both reply, then Coo lays them side by side and nudges the conversation on.</p>
+        <ul><li>A new question to answer together</li><li>Themed packs when you want more</li><li>React with a Coo sticker</li></ul>
+      </div>
+      <div class="demo">
+        <div class="phone">
+          <div class="screen" style="gap:9px">
+            <div class="qhead">When did you first feel really safe with me?</div>
+            <div class="qcard ans"><b>You</b><p>The night you drove 40 minutes just to bring me soup.</p></div>
+            <div class="qcard her ans a2"><b>Sana</b><p>Honestly? Our first long car ride. You let me pick every song.</p></div>
+            <div class="bubble coo-line" style="margin-top:4px"><span class="bl">Coo wonders</span><div class="bt" style="font-size:14px">Road trip this month? Coo will pack snacks.</div></div>
+          </div>
+          <div class="lock" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="28" width="44" height="30" rx="8" fill="#FFB020" stroke="#1E1A44" stroke-width="4"/><path d="M20 28v-8a12 12 0 0124 0v8" fill="none" stroke="#1E1A44" stroke-width="5"/></svg></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat" data-play>
+      <div class="copy rv">
+        <span class="kick">12 games</span>
+        <h2>Play apart. Compare together.</h2>
+        <p>Guess my answer, This or that, Who's more likely, Draw it guess it and more. Each of you plays on your own phone, and the results open when you're both done.</p>
+        <ul><li>One free try of every game</li><li>Coo reacts to your score</li><li>Spicy 18+ editions with Plus</li></ul>
+      </div>
+      <div class="demo">
+        <div class="phone">
+          <div class="screen" style="gap:8px">
+            <div class="qhead" style="font-size:15px">Results · Guess my answer</div>
+            <div style="display:grid;justify-items:center" class="slap"><span data-astk="sob" data-px="120"></span></div>
+            <div class="score">4 of 5<small>You know Sana scarily well.</small></div>
+            <div class="qcard rowin"><b>Perfect lazy Sunday?</b><div class="res"><span class="pill">Sana: Bed till noon</span><span class="pill ok">You guessed ✓</span></div></div>
+            <div class="qcard rowin"><b>My karaoke move?</b><div class="res"><span class="pill">Sana: Power ballad</span><span class="pill no">Cheesy pop ✗</span></div></div>
+            <div class="qcard rowin"><b>Comfort food?</b><div class="res"><span class="pill">Sana: Pizza</span><span class="pill ok">You guessed ✓</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat flip" data-play>
+      <div class="copy rv">
+        <span class="kick">Hugs</span>
+        <h2>Send the hug you can't give.</h2>
+        <p>Hold down and Coo wraps his wings around a heart. The longer you hold, the tighter the hug. They feel a soft heartbeat for just as long when they open it.</p>
+      </div>
+      <div class="demo">
+        <div class="phone">
+          <div class="screen" style="justify-content:center;gap:22px">
+            <div class="qhead">Hug for Sana</div>
+            <div class="hugwrap">
+              <span class="beat"></span><span class="beat b2"></span>
+              <span data-astk="hug" data-px="200" style="display:block"></span>
+            </div>
+            <span class="holdbtn">Press and hold</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat" data-play>
+      <div class="copy rv">
+        <span class="kick">Letters</span>
+        <h2>Leave words for the right moment.</h2>
+        <p>Write a letter and it arrives as a real envelope, sealed with a Coo sticker. With Plus, leave "Open when" letters for a date or a day they need it.</p>
+        <ul><li>Letters are free</li><li>Coo writes you both a letter every month</li><li>"Open when" letters with Plus</li></ul>
+      </div>
+      <div class="demo">
+        <div class="phone">
+          <div class="screen" style="justify-content:center">
+            <div class="qhead">Sana wrote you a letter</div>
+            <div class="env">
+              <svg viewBox="0 0 200 138" aria-hidden="true"><rect x="4" y="4" width="192" height="130" rx="14" fill="#FFD6E4" stroke="#1E1A44" stroke-width="5"/><path d="M8 12L100 80L192 12" fill="none" stroke="#1E1A44" stroke-width="5" stroke-linejoin="round"/><path d="M8 130L78 66M192 130L122 66" fill="none" stroke="#1E1A44" stroke-width="4" stroke-linecap="round" opacity=".5"/></svg>
+              <div class="seal"><span data-astk="melt" data-px="80"></span></div>
+            </div>
+            <div class="paper"><b>Hey you,</b>Found the ticket from our first gig in my coat. Still smiling about it. Same again soon? Love, S</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat flip" data-play>
+      <div class="copy rv">
+        <span class="kick">Coo grows up</span>
+        <h2>Watch your little world grow.</h2>
+        <p>Every doodle, photo and answer helps Coo grow. His room fills with things you earn together, and Our home keeps every memory. No streaks. No guilt.</p>
+      </div>
+      <div class="demo">
+        <div class="phone">
+          <div class="screen" style="justify-content:center">
+            <div class="qhead">Our Coo</div>
+            <div class="grow" id="growRow"></div>
+            <div class="growth" style="margin-top:12px"><div class="gt">Little Coo → Grown Coo <span>58 / 150</span></div><div class="track"><i style="width:40%"></i></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="stickers">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kick">Coo stickers</span>
+      <h2>Say it with a Coo.</h2>
+      <p class="lede" style="margin-inline:auto">Twelve animated stickers for doodles, answers, game results and letters. Tap one to see it land.</p>
+    </div>
+    <div class="wall" id="wall"></div>
+  </div>
+</section>
+
+<section style="padding-top:30px">
+  <div class="wrap widgets">
+    <div class="copy rv" style="display:grid;gap:14px">
+      <span class="kick">Widgets</span>
+      <h2>Their day, on your Lock Screen.</h2>
+      <p class="lede">See Sana's mood and time at a glance, how many days you've been together, and the latest doodle right on your Home Screen.</p>
+    </div>
+    <div class="lockscreen rv d1" aria-label="Example Lock Screen with LoveCo widgets">
+      <div class="date">Tuesday 29 September</div>
+      <div class="time">9:41</div>
+      <div class="lw">
+        <span class="circ">🥺</span>
+        <span>Sana · Clingy today<br><small style="opacity:.8">7:41 pm her time</small></span>
+        <span class="circ" style="font-size:15px;font-weight:800">412<br><small style="font-size:9px">days</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plus">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="kick">LoveCo Plus</span>
+      <h2>One subscription. Both of you.</h2>
+      <p class="lede" style="margin-inline:auto">Start free. When one of you gets Plus, your partner has it too.</p>
+    </div>
+    <div class="plans">
+      <div class="plan best stk-card rv">
+        <span class="tag plus" style="justify-self:start">Best value</span>
+        <div><span class="price">$39.99</span> <span class="per">a year</span></div>
+        <div class="sub">Just $3.33 a month · 7-day free trial</div>
+        <ul><li>A question every day, every pack</li><li>Unlimited rounds of all 12 games</li><li>All 12 Coo stickers and your own words on Coo's sign</li><li>"Open when" letters and every memory</li><li>Covers both of you</li></ul>
+      </div>
+      <div class="plan stk-card rv d1">
+        <span class="tag" style="justify-self:start">Flexible</span>
+        <div><span class="price">$6.99</span> <span class="per">a week</span></div>
+        <div class="sub" style="color:var(--sub)">Cancel anytime</div>
+        <ul><li>Everything in Plus</li><li>Renews weekly</li><li>Covers both of you</li></ul>
+      </div>
+    </div>
+    <div class="freeplus">
+      <div class="stk-card rv"><h3><span class="tag">Free</span>Always yours</h3>
+        <ul><li>Unlimited doodles, photos and hugs</li><li>Letters, tiny dates and Coo growing up</li><li>6 animated Coo stickers</li><li>A question every day in week one, then Mon, Wed and Fri</li><li>One try of every game</li></ul></div>
+      <div class="stk-card rv d1"><h3><span class="tag plus">Plus</span>Everything, for two</h3>
+        <ul><li>Daily questions and every question pack</li><li>Unlimited games and Spicy 18+ editions</li><li>All 12 stickers and a sign with your words</li><li>"Open when" letters, all memories, outfits and room themes</li></ul></div>
+    </div>
+    <p class="legal">Prices in US dollars; your App Store shows your local price. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. Payment is charged to your Apple Account. The free trial turns into a paid yearly subscription unless you cancel before it ends. Manage or cancel in your Apple Account settings.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head center rv"><span class="kick">FAQ</span><h2>Good questions.</h2></div>
+    <div class="faq">
+      <details class="stk-card rv"><summary>Do we both need the app?</summary><div class="ans-body">Yes. LoveCo is made for two phones. Download it, then send your partner your invite link. They tap it, get the app, and you're paired.</div></details>
+      <details class="stk-card rv"><summary>Do we both need to pay for Plus?</summary><div class="ans-body">No. One subscription covers both of you. When either of you has Plus, the other gets it automatically.</div></details>
+      <details class="stk-card rv"><summary>Is it only for long distance couples?</summary><div class="ans-body">Not at all. It's for any couple: across the world, across town, or across the sofa. Doodles and games are just as fun when you're in the same room.</div></details>
+      <details class="stk-card rv"><summary>Who can see what we share?</summary><div class="ans-body">Only the two of you. Answers stay sealed until you've both replied, and we never sell your data. Read our <a href="privacy.html">Privacy Policy</a>.</div></details>
+      <details class="stk-card rv"><summary>Is there an Android version?</summary><div class="ans-body">Not yet. LoveCo is on iPhone for now.</div></details>
+      <details class="stk-card rv"><summary>What if we break up or I want to leave?</summary><div class="ans-body">You can unpair or delete your account any time from Settings. Deleting your account removes your data.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="cw rv" id="finalCoo"></div>
+    <h2 class="rv">Coo's ready when you are.</h2>
+    <p class="lede rv" style="margin:14px auto 0">Get LoveCo, send your invite, and draw your partner something tiny today.</p>
+    <div class="cta-row rv">
+      <a class="appstore" href="https://apps.apple.com/app/loveco/id6757470996" aria-label="Download LoveCo on the App Store">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.05-.52 2.69-1.28z"/></svg>
+        <span><small>Download on the</small><b>App Store</b></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 LoveCo · Made in London</span>
+    <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html">Support</a></li><li><a href="mailto:support@loveco.app">Contact</a></li></ul>
+  </div>
 </footer>
 
+<script src="coo.js"></script>
+<script src="site.js"></script>
 </body>
 </html>

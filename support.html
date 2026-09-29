@@ -1,139 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support — LoveCo</title>
-    <meta name="description" content="Get help with LoveCo. Contact support, read FAQs, and find answers.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>">
-</head>
-<body>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · LoveCo</title><meta name="description" content="Get help with LoveCo: pairing, Plus, widgets, notifications and your account."><meta name="theme-color" content="#E4DEFF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%95%8A%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="site.css"></head><body>
+<nav class="nav" id="nav"><div class="wrap">
+  <a class="logo" href="/" aria-label="LoveCo home"><span data-coo="head" aria-hidden="true"></span><span>Love<em>Co</em></span></a>
+  <ul><li><a href="/#how">How it works</a></li><li><a href="/#stickers">Stickers</a></li><li><a href="/#plus">Plus</a></li><li><a href="support.html">Support</a></li></ul>
+  <a class="btn" href="https://apps.apple.com/app/loveco/id6757470996">Get LoveCo</a></div></nav>
+<main class="doc">
 
-<!-- Navigation -->
-<nav class="nav">
-    <div class="nav-inner">
-        <a href="index.html" class="nav-logo">Love<span>Co</span></a>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            <li><a href="support.html" class="active">Support</a></li>
-        </ul>
-    </div>
-</nav>
+<span class="kick">Support</span>
+<h1>How can we help?</h1>
+<p>Email <a href="mailto:support@loveco.app">support@loveco.app</a> and a real person will reply, usually within a day. Found a bug? Tell us what happened and which screen you were on, and a screenshot helps a lot.</p>
+<div class="box" style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn" href="mailto:support@loveco.app?subject=LoveCo%20help">Email support</a><a class="btn alt" href="mailto:support@loveco.app?subject=LoveCo%20bug">Report a bug</a><a class="btn alt" href="mailto:support@loveco.app?subject=LoveCo%20idea">Suggest an idea</a></div>
+<h2>Common questions</h2>
+<div class="faq" style="margin:0"><details class="stk-card"><summary>How do I pair with my partner?</summary><div class="ans-body">Open LoveCo, draw your partner a first doodle and send your invite link (Messages, WhatsApp, anything). When they tap it, they get the app and you're paired. Coo hatches for both of you.</div></details><details class="stk-card"><summary>My partner got the app but isn't paired</summary><div class="ans-body">Ask them to tap your invite link again after installing. If it still doesn't work, send a fresh invite from the app.</div></details><details class="stk-card"><summary>Do we both need to pay for Plus?</summary><div class="ans-body">No. One subscription covers both of you while you're paired.</div></details><details class="stk-card"><summary>How do I cancel Plus?</summary><div class="ans-body">iOS Settings, then your name, then Subscriptions, then LoveCo. Plus stays active until the end of the period you've paid for.</div></details><details class="stk-card"><summary>How do I restore Plus on a new phone?</summary><div class="ans-body">Sign in with the same Apple or Google account you used before, then go to Settings and tap Restore purchase.</div></details><details class="stk-card"><summary>How do I add the widgets?</summary><div class="ans-body">Home Screen: long-press an empty area, tap Edit, then Add Widget, and search for LoveCo. Lock Screen: long-press the Lock Screen, tap Customize, then the widget area. Widgets update when something new arrives and through the day.</div></details><details class="stk-card"><summary>Why didn't I get a notification?</summary><div class="ans-body">Check iOS Settings, then Notifications, then LoveCo. LoveCo sends at most a couple of Coo reminders a day and none at night, but things your partner sends always arrive.</div></details><details class="stk-card"><summary>How do I unpair?</summary><div class="ans-body">Settings, then Unpair. You'll see exactly what happens before anything changes. If you pair with the same person again within 30 days, your shared space comes back. You can also block a former partner there.</div></details><details class="stk-card"><summary>How do I delete my account?</summary><div class="ans-body">Settings, then Delete my account. Cancel any subscription in iOS Settings too, since Apple bills it separately.</div></details></div>
 
-<!-- Content -->
-<div class="page-content">
-    <div class="container">
-        <div class="text-center" style="max-width: 600px; margin: 0 auto 48px;">
-            <h1 style="font-size: 40px;">How Can We Help?</h1>
-            <p style="margin-top: 12px;">We're here to make sure you and your partner have the best experience with LoveCo.</p>
-        </div>
-
-        <!-- Contact Cards -->
-        <div class="support-grid">
-            <div class="card support-card">
-                <div class="support-icon">📧</div>
-                <h3>Email Support</h3>
-                <p>Send us an email and we'll get back to you within 24 hours.</p>
-                <a href="mailto:support@loveco.app" class="btn btn-coral" style="margin-top: 16px;">support@loveco.app</a>
-            </div>
-            <div class="card support-card">
-                <div class="support-icon">🐛</div>
-                <h3>Report a Bug</h3>
-                <p>Found something broken? Let us know so we can fix it quickly.</p>
-                <a href="mailto:support@loveco.app?subject=Bug%20Report%20-%20LoveCo" class="btn btn-outline" style="margin-top: 16px;">Report Bug</a>
-            </div>
-            <div class="card support-card">
-                <div class="support-icon">💡</div>
-                <h3>Feature Request</h3>
-                <p>Have an idea that would make LoveCo even better? We'd love to hear it.</p>
-                <a href="mailto:support@loveco.app?subject=Feature%20Request%20-%20LoveCo" class="btn btn-outline" style="margin-top: 16px;">Suggest Feature</a>
-            </div>
-        </div>
-
-        <!-- FAQ Section -->
-        <div class="faq-section" style="max-width: 760px; margin: 60px auto 0;">
-            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <h3>How do I pair with my partner?</h3>
-                <p>After creating your account, tap "Create Couple Space" to get a 6-digit pairing code. Share this code with your partner, who can enter it by tapping "Join Couple Space." The code expires after 15 minutes for security.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>What does LoveCo Gold include?</h3>
-                <p>LoveCo Gold unlocks unlimited heartbeats, habits, tasks, plans, memories, all couple games, daily questions, premium widget styles, and drawing tools. One subscription covers both partners — when you subscribe, your partner automatically gets Gold too.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How does the 2-for-1 subscription work?</h3>
-                <p>When either partner subscribes to LoveCo Gold, the premium benefits are automatically shared with the paired partner at no extra cost. Only one of you needs to subscribe.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How do I cancel my subscription?</h3>
-                <p>Open your device's <strong>Settings > Apple ID > Subscriptions</strong>, find LoveCo, and tap "Cancel Subscription." Your Gold benefits will remain active until the end of the current billing period.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How do I restore my subscription on a new device?</h3>
-                <p>Open LoveCo, go to the paywall or settings, and tap "Restore Purchases." Your subscription will be restored automatically if you're signed in with the same Apple ID.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How do home screen widgets work?</h3>
-                <p>Long-press on your home screen, tap the "+" button, search for "LoveCo," and add the widget. It will display your partner's latest heartbeat and mood. Widgets refresh when your partner sends a new heartbeat and periodically throughout the day.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Can I unpair from my partner?</h3>
-                <p>Yes. Go to <strong>Profile > Settings > Unpair</strong>. This will disconnect you from your partner's couple space. You can create a new couple space or join another one at any time.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>How do I delete my account?</h3>
-                <p>Go to <strong>Profile > Settings > Delete Account</strong>. This will permanently delete your account and personal data. Active subscriptions should be cancelled separately through Apple's subscription management.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>What are daily questions?</h3>
-                <p>Every day, you and your partner get a new conversation-starter question. Both of you answer independently, and once both have answered, you can see each other's responses. It's a fun way to spark real conversations and learn something new about each other.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>What is the weekly recap?</h3>
-                <p>Every Sunday, you'll get a recap of your week together — how many heartbeats you sent, habits you kept, questions you answered, and your current streak. It's a celebration of the love you put in.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Is my data private?</h3>
-                <p>Yes. Your couple data is only shared between you and your paired partner. We do not sell or share your data with third parties. All data is encrypted in transit. Read our full <a href="privacy.html" style="color: var(--rose);">Privacy Policy</a> for details.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>What iOS version is required?</h3>
-                <p>LoveCo requires iOS 17.0 or later. It works on iPhone and supports home screen widgets.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-inner">
-        <p class="footer-copy">&copy; 2026 LoveCo. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
-            <li><a href="support.html">Support</a></li>
-        </ul>
-    </div>
-</footer>
-
-</body>
-</html>
+</main>
+<footer><div class="wrap"><span>© 2026 LoveCo · Made in London</span>
+  <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="support.html">Support</a></li><li><a href="mailto:support@loveco.app">Contact</a></li></ul></div></footer>
+<script src="coo.js"></script><script>(function(){var C=window.Coo;document.querySelectorAll('[data-coo="head"]').forEach(function(e){e.innerHTML='<svg class="cupid" viewBox="44 26 112 104" aria-hidden="true">'+C.coo({face:'happy',noFx:true})+'</svg>'});var n=document.getElementById('nav');addEventListener('scroll',function(){n.classList.toggle('scrolled',scrollY>10)},{passive:true})})();</script>
+</body></html>

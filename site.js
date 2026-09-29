@@ -35,10 +35,10 @@
   // Hero: Coo flies in with something new, the card changes, Coo grows a little
   const states = [
     { label: "today's question", title: "What's a tiny thing I do that you secretly love?", btn: 'Answer' },
-    { label: 'new from Sana', title: 'Sana sent you a doodle 💌', btn: 'Open it', fly: true },
-    { label: 'Sana reacted', title: 'Sana melted at your answer 🫠', btn: 'See it' },
-    { label: 'your turn', title: 'Sana played This or that. Your turn', btn: 'Play my half', fly: true },
-    { label: 'letter idea', title: 'Write Sana a letter about the moment you knew', btn: 'Write it' }
+    { label: 'new from Emma', title: 'Emma sent you a doodle 💌', btn: 'Open it', fly: true },
+    { label: 'Emma reacted', title: 'Emma melted at your answer 🫠', btn: 'See it' },
+    { label: 'your turn', title: 'Emma played This or that. Your turn', btn: 'Play my half', fly: true },
+    { label: 'letter idea', title: 'Write Emma a letter about the moment you knew', btn: 'Write it' }
   ];
   let si = 0, grown = 22;
   const bubble = $('#heroBubble'), label = $('#heroLabel'), title = $('#heroTitle'), btn = $('#heroBtn');

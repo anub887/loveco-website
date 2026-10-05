@@ -110,6 +110,18 @@
     });
   }
 
+  // Hero clips: play only while on screen; tap to play if the phone blocked autoplay
+  const clipVids = $$('video[data-clip]');
+  if (clipVids.length) {
+    clipVids.forEach(v => { v.muted = true; v.addEventListener('click', () => { v.paused ? v.play().catch(() => {}) : v.pause(); }); });
+    if (!RM && 'IntersectionObserver' in window) {
+      const vo = new IntersectionObserver(es => es.forEach(e => {
+        if (e.intersectionRatio > .4) e.target.play().catch(() => {}); else e.target.pause();
+      }), { threshold: [0, .4] });
+      clipVids.forEach(v => vo.observe(v));
+    }
+  }
+
   // Nav background once scrolled
   const nav = $('#nav');
   const onScroll = () => nav && nav.classList.toggle('scrolled', scrollY > 10);

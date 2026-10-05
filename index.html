@@ -13,8 +13,8 @@
 <meta name="apple-itunes-app" content="app-id=6757470996">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%95%8A%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <script>(function(u,d){d.className+=/Android/i.test(u)?' os-android':/iPhone|iPad|iPod/i.test(u)?' os-ios':' os-other'})(navigator.userAgent||'',document.documentElement)</script>
-<link rel="stylesheet" href="site.css?v=20261005c">
-<link rel="stylesheet" href="coo-anim.css?v=20261005c">
+<link rel="stylesheet" href="site.css?v=20261005d">
+<link rel="stylesheet" href="coo-anim.css?v=20261005d">
 </head>
 <body>
 
@@ -31,17 +31,21 @@
   </div>
 </nav>
 
-<header class="hero hero-center" id="top">
+<header class="hero hero-center hero-v2" id="top">
   <div class="clouds" aria-hidden="true" id="clouds"></div>
   <div class="wrap">
     <div>
-      <span class="kick">For couples who want more little moments</span>
-      <h1 style="margin-top:14px">Grow your love<br><span class="pink">and have fun.</span></h1>
-      <p class="lede">The small, silly, sweet things that keep two people close. Draw your partner an inside joke, discover something new about each other, laugh at how differently you answered. Coo carries it all between you.</p>
+      <span class="kick">The couples app with Coo</span>
+      <h1>Grow your love<br><span class="pink">and have fun.</span></h1>
+      <ul class="vals">
+        <li><span aria-hidden="true">✏️</span><p><b>Draw something silly.</b> It lands on their Home Screen.</p></li>
+        <li><span aria-hidden="true">💬</span><p><b>Answer the same question.</b> Open both answers together.</p></li>
+        <li><span aria-hidden="true">🎲</span><p><b>Play quick games</b> about each other.</p></li>
+      </ul>
       <div class="cta-row">
-        <a class="appstore big" href="https://apps.apple.com/app/loveco/id6757470996" aria-label="Download LoveCo on the App Store">
+        <a class="appstore big" href="https://apps.apple.com/app/loveco/id6757470996" aria-label="Download LoveCo now on the App Store">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.05-.52 2.69-1.28z"/></svg>
-          <span><small>Download on the</small><b>App Store</b></span>
+          <span><b>Download now</b><small>on the App Store</small></span>
         </a>
         <span class="fine">For iPhone · Made for two</span>
         <div class="droid" id="android">
@@ -56,30 +60,10 @@
         </div>
       </div>
     </div>
-
-    <div class="demo" id="heroDemo" style="min-height:560px">
-      <div class="float-stk" data-depth="18" style="left:0;top:4%"><span data-astk="sob" data-px="110"></span></div>
-      <div class="float-stk" data-depth="-14" style="right:0;top:10%"><span data-astk="sideeye" data-px="104"></span></div>
-      <div class="float-stk" data-depth="22" style="left:2%;bottom:6%"><span data-astk="hug" data-px="112"></span></div>
-      <div class="phone" id="heroPhone">
-        <div class="screen">
-          <div class="chips">
-            <span class="chip"><span class="av">E</span><span>Emma ›<small>7:42 pm her time</small></span></span>
-            <span class="chip"><span class="av me">J</span><span>You<small>Set status</small></span></span>
-          </div>
-          <div class="bubble tail swap" id="heroBubble">
-            <span class="bl" id="heroLabel">today's question</span>
-            <div class="bt" id="heroTitle">What's a tiny thing I do that you secretly love?</div>
-            <span class="mini" id="heroBtn">Answer</span>
-          </div>
-          <div class="stage"><div class="cw" id="heroCoo"></div></div>
-          <div class="growth">
-            <div class="gt">Baby Coo → Little Coo <span id="growN">22 / 30</span></div>
-            <div class="track"><i id="growBar"></i></div>
-          </div>
-        </div>
-      </div>
-      <div class="flyer" id="flyer" aria-hidden="true"></div>
+    <div class="clips" aria-label="LoveCo on an iPhone">
+      <figure><div class="shot"><video muted loop playsinline preload="metadata" poster="media/draw.jpg" width="440" height="956" data-clip><source src="media/draw.mp4" type="video/mp4"></video></div><figcaption>Draw it. Coo delivers it.</figcaption></figure>
+      <figure><div class="shot"><video muted loop playsinline preload="metadata" poster="media/reveal.jpg" width="440" height="956" data-clip><source src="media/reveal.mp4" type="video/mp4"></video></div><figcaption>Both answers, opened together</figcaption></figure>
+      <figure><div class="shot"><img src="media/game.jpg" alt="Results of a LoveCo game: how well two partners guessed each other's answers" width="440" height="956" loading="lazy"></div><figcaption>How well do you know each other?</figcaption></figure>
     </div>
   </div>
 </header>
@@ -302,9 +286,9 @@
     <h2 class="rv">Coo's ready when you are.</h2>
     <p class="lede rv" style="margin:14px auto 0">Download LoveCo, send your partner the invite, and make your first little moment today.</p>
     <div class="cta-row rv">
-      <a class="appstore big" href="https://apps.apple.com/app/loveco/id6757470996" aria-label="Download LoveCo on the App Store">
+      <a class="appstore big" href="https://apps.apple.com/app/loveco/id6757470996" aria-label="Download LoveCo now on the App Store">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.05-.52 2.69-1.28z"/></svg>
-        <span><small>Download on the</small><b>App Store</b></span>
+        <span><b>Download now</b><small>on the App Store</small></span>
       </a>
       <div class="droid">
         <span class="droid-tag">Coming soon on Android</span>
@@ -327,7 +311,7 @@
   </div>
 </footer>
 
-<script src="coo.js?v=20261005c"></script>
-<script src="site.js?v=20261005c"></script>
+<script src="coo.js?v=20261005d"></script>
+<script src="site.js?v=20261005d"></script>
 </body>
 </html>

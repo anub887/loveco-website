@@ -128,3 +128,68 @@
     $$('.rv').forEach(el => el.classList.add('in')); $$('[data-play]').forEach(el => el.classList.add('play'));
   }
 })();
+
+/* Visits, App Store taps and the "tell me when it's on Android" list.
+   PostHog (same project as the app). No cookies, no local storage, no session recording, no autocapture.
+   The key below is a public write-only project token (the kind every website ships), not a secret. */
+(function () {
+  var KEY = 'phc_rEZVZE4tebhaqsbaAHk4pAmu4sqx43abPQZCAMueVZCg', HOST = 'https://us.i.posthog.com';
+  var root = document.documentElement, q = new URLSearchParams(location.search);
+  var os = root.classList.contains('os-android') ? 'android' : root.classList.contains('os-ios') ? 'ios' : 'other';
+  var base = { site: 'getloveco.com', device_os: os };
+  // ?from=ru (or any utm_source) says which account or post sent the visit
+  var from = (q.get('from') || q.get('utm_source') || '').slice(0, 40); if (from) base.from = from;
+  var test = q.has('lctest'); if (test) base.is_test = true;
+  var ph = null;
+
+  var s = document.createElement('script');
+  s.async = true; s.crossOrigin = 'anonymous'; s.src = 'https://us-assets.i.posthog.com/static/array.js';
+  s.onload = function () {
+    if (!window.posthog || !window.posthog.init) return;
+    window.posthog.init(KEY, {
+      api_host: HOST, persistence: 'memory', person_profiles: 'identified_only',
+      autocapture: false, capture_pageview: false, capture_pageleave: true,
+      disable_session_recording: true, disable_surveys: true, advanced_disable_flags: true,
+      loaded: function (p) { ph = p; p.register(base); p.capture('$pageview'); }
+    });
+  };
+  document.head.appendChild(s);
+  function track(name, props) { try { if (ph) ph.capture(name, props || {}, { send_instantly: true }); } catch (e) {} }
+
+  // App Store taps, by where the button sits
+  Array.prototype.forEach.call(document.querySelectorAll('a[href*="apps.apple.com"]'), function (a) {
+    var place = a.closest('.nav') ? 'nav' : a.closest('.hero') ? 'hero' : a.closest('.final') ? 'footer' : 'other';
+    a.addEventListener('click', function () { track('app_store_click', { placement: place }); });
+  });
+
+  // On an Android phone the nav button points at the email box instead of the App Store
+  var nav = document.getElementById('navCta');
+  if (os === 'android' && nav) { nav.textContent = 'Tell me when'; nav.href = '#android'; }
+
+  // "Tell me when": the email goes straight to PostHog and we only say "you're on the list" once it has been accepted
+  function uid() { return (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : 'w-' + Date.now() + '-' + Math.random().toString(36).slice(2); }
+  Array.prototype.forEach.call(document.querySelectorAll('form[data-waitlist]'), function (f) {
+    var box = f.closest('.droid'), note = box.querySelector('.droid-note'), input = f.querySelector('input[type=email]'), btn = f.querySelector('button');
+    var say = function (t, bad) { note.innerHTML = t; box.classList.toggle('bad', !!bad); };
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = (input.value || '').trim().toLowerCase();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email) || email.length > 200) { say('That email doesn\u2019t look right. Have another go.', true); input.focus(); return; }
+      var ok = function () { box.classList.remove('bad'); box.classList.add('done'); note.textContent = 'You\u2019re on the list. We\u2019ll email you the day LoveCo lands on Android.'; };
+      if (f.querySelector('.hp').value) return ok();
+      btn.disabled = true; btn.textContent = 'Saving\u2026';
+      var props = { email: email, placement: f.dataset.waitlist, $current_url: location.origin + location.pathname, $host: location.host, $pathname: location.pathname,
+        $referrer: document.referrer || '$direct', $lib: 'web-form', $set: { email: email, android_waitlist: true } };
+      for (var k in base) props[k] = base[k];
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) { if (q.get(k)) props[k] = q.get(k).slice(0, 80); });
+      var id = uid(); try { if (ph) id = ph.get_distinct_id(); } catch (e2) {}
+      fetch(HOST + '/i/v0/e/', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ api_key: KEY, event: 'android_waitlist_signup', distinct_id: id, properties: props }) })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); ok(); })
+        .catch(function () {
+          btn.disabled = false; btn.textContent = 'Tell me when';
+          say('That didn\u2019t save. Try again, or email <a href="mailto:support@loveco.app?subject=Tell%20me%20when%20LoveCo%20is%20on%20Android">support@loveco.app</a> and we\u2019ll add you.', true);
+        });
+    });
+  });
+})();

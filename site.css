@@ -348,3 +348,27 @@ footer a{text-decoration:none;color:var(--sub);font-weight:600}footer a:hover{co
 @media (prefers-reduced-motion:reduce){.appstore.big,.appstore.big:after{animation:none}}
 .hero-center .phone{text-align:left}
 @media (min-width:720px){.appstore.big{padding:22px 48px 22px 38px}.appstore.big b{font-size:38px}.appstore.big small{font-size:15px}.appstore.big svg{width:52px;height:52px}}
+
+/* Android: coming soon + "tell me when" email box (Oct 2026) */
+.droid{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;gap:10px;width:min(440px,calc(100vw - 2*var(--gut)));margin-top:10px}
+.droid-tag{display:inline-flex;align-items:center;gap:8px;font:800 13px var(--f-d);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);
+  background:var(--mint);border:2.5px solid var(--ink);border-radius:999px;padding:6px 14px}
+.droid-tag:before{content:"";width:8px;height:8px;border-radius:50%;background:#2FBF71}
+.droid-form{display:flex;gap:8px;width:100%}
+.droid-form input[type=email]{flex:1;min-width:0;font:600 16px var(--f-b);color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:18px;padding:12px 16px;box-shadow:0 5px 0 var(--ink)}
+.droid-form input[type=email]::placeholder{color:#A6A2C4}
+.droid-form input[type=email]:focus{outline:3px solid var(--pink);outline-offset:2px}
+.droid-form .btn{flex:none;font-size:16px;padding:12px 16px;white-space:nowrap;cursor:pointer}
+.droid-form .btn[disabled]{opacity:.6;cursor:default}
+.droid-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.droid-note{font:600 13.5px var(--f-d);color:var(--sub);min-height:1.4em}
+.droid-note a{text-decoration:underline}
+.droid.done .droid-form{display:none}
+.droid.done .droid-note{font-size:16px;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:18px;padding:12px 18px;box-shadow:0 5px 0 var(--ink)}
+.droid.bad .droid-note{color:#C2255C}
+.final .droid{margin-inline:auto;margin-top:6px}
+.final .cta-row{flex-direction:column;gap:18px}
+@media (max-width:340px){.droid-form{flex-direction:column}.droid-form .btn{width:100%}}
+/* on an Android phone the email box leads and the App Store button steps back */
+.os-android .hero-center .cta-row .droid{order:-1;margin-top:0;margin-bottom:8px}
+.os-android .final .cta-row .droid{order:-1}

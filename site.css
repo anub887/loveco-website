@@ -349,26 +349,27 @@ footer a{text-decoration:none;color:var(--sub);font-weight:600}footer a:hover{co
 .hero-center .phone{text-align:left}
 @media (min-width:720px){.appstore.big{padding:22px 48px 22px 38px}.appstore.big b{font-size:38px}.appstore.big small{font-size:15px}.appstore.big svg{width:52px;height:52px}}
 
-/* Android: coming soon + "tell me when" email box (Oct 2026) */
-.droid{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;gap:10px;width:min(440px,calc(100vw - 2*var(--gut)));margin-top:10px}
-.droid-tag{display:inline-flex;align-items:center;gap:8px;font:800 13px var(--f-d);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);
-  background:var(--mint);border:2.5px solid var(--ink);border-radius:999px;padding:6px 14px}
-.droid-tag:before{content:"";width:8px;height:8px;border-radius:50%;background:#2FBF71}
-.droid-form{display:flex;gap:8px;width:100%}
-.droid-form input[type=email]{flex:1;min-width:0;font:600 16px var(--f-b);color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:18px;padding:12px 16px;box-shadow:0 5px 0 var(--ink)}
+/* Android: coming soon + "tell me when" email box (Oct 2026). Small and secondary: the App Store button is the one big action. */
+.droid{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;gap:7px;width:min(330px,calc(100vw - 2*var(--gut)));margin-top:14px}
+.droid-tag{display:inline-flex;align-items:center;gap:6px;font:800 11px var(--f-d);letter-spacing:.06em;text-transform:uppercase;color:var(--sub)}
+.droid-tag:before{content:"";width:6px;height:6px;border-radius:50%;background:#2FBF71}
+.droid-form{display:flex;gap:6px;width:100%}
+.droid-form input[type=email]{flex:1;min-width:0;font:500 16px var(--f-b);color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:12px;padding:6px 12px}
 .droid-form input[type=email]::placeholder{color:#A6A2C4}
 .droid-form input[type=email]:focus{outline:3px solid var(--pink);outline-offset:2px}
-.droid-form .btn{flex:none;font-size:16px;padding:12px 16px;white-space:nowrap;cursor:pointer}
+.droid-form .btn{flex:none;font-size:14px;padding:6px 12px;white-space:nowrap;cursor:pointer;background:#fff;color:var(--ink);border-width:2px;border-radius:12px;box-shadow:0 3px 0 var(--ink)}
+.droid-form .btn:hover{box-shadow:0 4px 0 var(--ink)}
 .droid-form .btn[disabled]{opacity:.6;cursor:default}
 .droid-form .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.droid-note{font:600 13.5px var(--f-d);color:var(--sub);min-height:1.4em}
+.droid-note{font:600 12px var(--f-d);color:var(--sub);min-height:1.4em}
 .droid-note a{text-decoration:underline}
 .droid.done .droid-form{display:none}
-.droid.done .droid-note{font-size:16px;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:18px;padding:12px 18px;box-shadow:0 5px 0 var(--ink)}
+.droid.done .droid-note{font-size:14px;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:12px;padding:8px 14px}
 .droid.bad .droid-note{color:#C2255C}
-.final .droid{margin-inline:auto;margin-top:6px}
-.final .cta-row{flex-direction:column;gap:18px}
-@media (max-width:340px){.droid-form{flex-direction:column}.droid-form .btn{width:100%}}
-/* on an Android phone the email box leads and the App Store button steps back */
-.os-android .hero-center .cta-row .droid{order:-1;margin-top:0;margin-bottom:8px}
-.os-android .final .cta-row .droid{order:-1}
+.final .droid{margin-inline:auto}
+.final .cta-row{flex-direction:column;gap:14px}
+@media (max-width:300px){.droid-form{flex-direction:column}.droid-form .btn{width:100%}}
+/* the App Store button, a size up (5 Oct) */
+.appstore.big{padding:20px 36px 20px 28px}
+.appstore.big b{font-size:34px}.appstore.big small{font-size:15px}.appstore.big svg{width:46px;height:46px}
+@media (min-width:720px){.appstore.big{padding:26px 58px 26px 44px;border-radius:28px}.appstore.big b{font-size:46px}.appstore.big small{font-size:17px}.appstore.big svg{width:62px;height:62px}}

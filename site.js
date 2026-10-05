@@ -162,9 +162,6 @@
     a.addEventListener('click', function () { track('app_store_click', { placement: place }); });
   });
 
-  // On an Android phone the nav button points at the email box instead of the App Store
-  var nav = document.getElementById('navCta');
-  if (os === 'android' && nav) { nav.textContent = 'Tell me when'; nav.href = '#android'; }
 
   // "Tell me when": the email goes straight to PostHog and we only say "you're on the list" once it has been accepted
   function uid() { return (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : 'w-' + Date.now() + '-' + Math.random().toString(36).slice(2); }

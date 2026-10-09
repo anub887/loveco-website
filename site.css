@@ -367,6 +367,8 @@ footer a{text-decoration:none;color:var(--sub);font-weight:600}footer a:hover{co
 .droid.done .droid-note{font-size:14px;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:12px;padding:8px 14px}
 .droid.bad .droid-note{color:#C2255C}
 .final .droid{margin-inline:auto}
+.soon-copy{font:600 13px/1.45 var(--f-b);color:var(--ink);text-align:center;margin:0}
+.os-android .upd{display:none}
 .final .cta-row{flex-direction:column;gap:14px}
 @media (max-width:300px){.droid-form{flex-direction:column}.droid-form .btn{width:100%}}
 /* the App Store button, a size up (5 Oct) */

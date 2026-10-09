@@ -13,8 +13,8 @@
 <meta name="apple-itunes-app" content="app-id=6757470996">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%95%8A%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <script>(function(u,d){d.className+=/Android/i.test(u)?' os-android':/iPhone|iPad|iPod/i.test(u)?' os-ios':' os-other'})(navigator.userAgent||'',document.documentElement)</script>
-<link rel="stylesheet" href="site.css?v=20261005d">
-<link rel="stylesheet" href="coo-anim.css?v=20261005d">
+<link rel="stylesheet" href="site.css?v=20261009a">
+<link rel="stylesheet" href="coo-anim.css?v=20261009a">
 </head>
 <body>
 
@@ -48,6 +48,17 @@
           <span><b>Download now</b><small>on the App Store</small></span>
         </a>
         <span class="fine">For iPhone · Made for two</span>
+        <div class="droid upd" id="new">
+          <span class="droid-tag">New version coming soon</span>
+          <p class="soon-copy">What you see on this page is the new LoveCo, launching soon. Download now and you'll get it as a free update, or leave your email and we'll tell you the day it's live.</p>
+          <form class="droid-form" data-waitlist="update-hero" data-event="update_signup" data-done="You’re on the list. We’ll email you the day the new LoveCo is live." novalidate>
+            <label class="sr" for="up-hero">Your email</label>
+            <input id="up-hero" type="email" name="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="you@email.com" required>
+            <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+            <button class="btn" type="submit">Email me</button>
+          </form>
+          <p class="droid-note" role="status" aria-live="polite">One email the day it's live. Nothing else.</p>
+        </div>
         <div class="droid" id="android">
           <span class="droid-tag">Coming soon on Android</span>
           <form class="droid-form" data-waitlist="hero" novalidate>
@@ -311,7 +322,7 @@
   </div>
 </footer>
 
-<script src="coo.js?v=20261005d"></script>
-<script src="site.js?v=20261005d"></script>
+<script src="coo.js?v=20261009a"></script>
+<script src="site.js?v=20261009a"></script>
 </body>
 </html>

@@ -198,7 +198,7 @@
         .then(function (r) { if (!r.ok) throw new Error(r.status); ok(); })
         .catch(function () {
           btn.disabled = false; btn.textContent = label;
-          say('That didn\u2019t save. Try again, or email <a href="mailto:support@loveco.app?subject=' + (ev === 'update_signup' ? 'Tell%20me%20when%20the%20new%20LoveCo%20is%20live' : 'Tell%20me%20when%20LoveCo%20is%20on%20Android') + '">support@loveco.app</a> and we\u2019ll add you.', true);
+          say('That didn\u2019t save. Try again, or email <a href="mailto:support@getloveco.com?subject=' + (ev === 'update_signup' ? 'Tell%20me%20when%20the%20new%20LoveCo%20is%20live' : 'Tell%20me%20when%20LoveCo%20is%20on%20Android') + '">support@getloveco.com</a> and we\u2019ll add you.', true);
         });
     });
   });

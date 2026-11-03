@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.loveco",
+      "sha256_cert_fingerprints": [
+        "DF:13:78:89:61:63:90:51:AD:32:D6:AE:8F:10:70:AD:78:7B:09:B2:08:B7:DB:F4:55:66:97:F2:F2:93:65:3C",
+        "BF:E4:D8:7A:48:30:EE:6C:61:BC:C0:21:2A:F2:86:E4:48:84:63:23:99:93:B4:96:87:53:6C:F1:50:B2:57:BE"
+      ]
+    }
+  }
+]

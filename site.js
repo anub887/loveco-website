@@ -175,6 +175,13 @@
   });
 
 
+  Array.prototype.forEach.call(document.querySelectorAll('a[href*="play.google.com"]'), function (a) {
+    var place = a.closest('.nav') ? 'nav' : a.closest('.hero') ? 'hero' : a.closest('.final') ? 'footer' : 'other';
+    a.addEventListener('click', function () { track('play_store_click', { placement: place }); });
+  });
+  // Nav "Get LoveCo" opens Google Play on Android phones
+  if (os === 'android') Array.prototype.forEach.call(document.querySelectorAll('.nav .btn'), function (a) { a.href = 'https://play.google.com/store/apps/details?id=com.loveco'; });
+
   // "Tell me when": the email goes straight to PostHog and we only say "you're on the list" once it has been accepted
   function uid() { return (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : 'w-' + Date.now() + '-' + Math.random().toString(36).slice(2); }
   Array.prototype.forEach.call(document.querySelectorAll('form[data-waitlist]'), function (f) {

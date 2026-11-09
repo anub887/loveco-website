@@ -425,3 +425,13 @@ footer a{text-decoration:none;color:var(--sub);font-weight:600}footer a:hover{co
 }
 .hero-v2{padding-bottom:50px}
 @media (max-width:720px){.hero-v2{padding-bottom:24px}}
+
+/* Both stores (Android live 9 Nov 2026): same size; pink ring only on the first; Android visitors see Google Play first */
+.stores{display:flex;flex-wrap:wrap;gap:14px 16px;justify-content:center;align-items:center}
+.stores .appstore.big:nth-child(2){animation:none}
+.stores .appstore.big:nth-child(2):after{display:none}
+.os-android .stores .gp{order:-1}
+.os-android .stores .appstore.big.gp:after{display:block}
+.os-android .stores .appstore.big:not(.gp):after{display:none}
+.appstore.gp svg path:nth-child(1){fill:#4FC3F7}.appstore.gp svg path:nth-child(2){fill:#FFD54F}.appstore.gp svg path:nth-child(3){fill:#FF5A5F}.appstore.gp svg path:nth-child(4){fill:#43D17A}
+@media (min-width:720px){.stores .appstore.big b{font-size:32px}}

@@ -13,7 +13,8 @@
 <meta name="theme-color" content="#E4DEFF">
 <meta name="apple-itunes-app" content="app-id=6757470996">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%95%8A%EF%B8%8F%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="/site.css?v=20261009a">
+<script>(function(u,d){d.className+=/Android/i.test(u)?' os-android':/iPhone|iPad|iPod/i.test(u)?' os-ios':' os-other'})(navigator.userAgent||'',document.documentElement)</script>
+<link rel="stylesheet" href="/site.css?v=20261110a">
 <style>
 main{padding:28px 0 60px}
 .tool-head{max-width:720px;margin:0 auto;text-align:center;display:grid;gap:14px;justify-items:center}
@@ -52,7 +53,7 @@ main{padding:28px 0 60px}
 @media (max-width:520px){.bridge{grid-template-columns:1fr;justify-items:center;text-align:center}}
 </style>
 </head>
-<body>
+<body data-tool="days_counter">
 
 <nav class="nav" id="nav">
   <div class="wrap">
@@ -115,13 +116,17 @@ main{padding:28px 0 60px}
       <details class="stk-card"><summary>What is a monthsary?</summary><p>Your monthly anniversary: the same date each month as the day you got together. If you got together on 14 February, every 14th is your monthsary.</p></details>
       <details class="stk-card"><summary>Can we see our days together on our phones?</summary><p>Yes. LoveCo, a free couples app for iPhone, shows your days together on your lock screen and Home Screen, along with doodles from your partner.</p></details>
     </section>
+    <section class="more" aria-label="More free tools" style="max-width:720px;margin:44px auto 0;text-align:center;display:grid;gap:12px">
+      <h2 style="font-size:clamp(22px,3vw,28px)">More free tools for couples</h2>
+      <p><a href="/how-well-do-you-know-your-partner/">💞 How well do you know your partner?</a> · <a href="/long-distance-time-zone-planner/">🌍 Long-distance time zone planner</a> · <a href="/monthsary-calculator/">🎂 Monthsary calculator</a> · <a href="/tools/">All tools</a></p>
+    </section>
   </div>
 </main>
 
 <footer>
   <div class="wrap">
     <span>© 2026 LoveCo · Made in London</span>
-    <ul><li><a href="/">LoveCo</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/support.html">Support</a></li></ul>
+    <ul><li><a href="/">LoveCo</a></li><li><a href="/tools/">Free tools</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/support.html">Support</a></li></ul>
   </div>
 </footer>
 
@@ -175,5 +180,6 @@ main{padding:28px 0 60px}
   var nav=document.getElementById('nav'); addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>8);},{passive:true});
 })();
 </script>
+<script src="/track.js?v=20261110a"></script>
 </body>
 </html>

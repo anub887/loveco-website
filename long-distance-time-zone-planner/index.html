@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Long-Distance Time Zone Planner: Best Time to Call | LoveCo</title>
+<meta name="description" content="Free time zone planner for long-distance couples. See both clocks, the time difference and the hours you are both awake to call. No sign-up.">
+<link rel="canonical" href="https://getloveco.com/long-distance-time-zone-planner/">
+<meta property="og:title" content="Long-distance time zone planner for couples">
+<meta property="og:description" content="Free time zone planner for long-distance couples. See both clocks, the time difference and the hours you are both awake to call. No sign-up.">
+<meta property="og:url" content="https://getloveco.com/long-distance-time-zone-planner/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#E4DEFF">
+<meta name="apple-itunes-app" content="app-id=6757470996">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E%F0%9F%95%8A%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<script>(function(u,d){d.className+=/Android/i.test(u)?' os-android':/iPhone|iPad|iPod/i.test(u)?' os-ios':' os-other'})(navigator.userAgent||'',document.documentElement)</script>
+<link rel="stylesheet" href="/site.css?v=20261110a">
+<link rel="stylesheet" href="/tools.css?v=20261110a">
+<style>
+.clocks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.clk{background:var(--chip);border-radius:16px;padding:14px;text-align:center}
+.clk b{display:block;font:900 clamp(30px,6vw,42px)/1.05 var(--f-d)}
+.clk span{font:700 14px var(--f-d);color:var(--sub)}
+.diff{font:800 20px var(--f-d);text-align:center}
+.grid{display:grid;gap:6px}
+.grid .lane{display:grid;grid-template-columns:58px 1fr;align-items:center;gap:8px;font:800 13px var(--f-d)}
+.cells{display:grid;grid-template-columns:repeat(24,1fr);gap:2px}
+.cells i{height:22px;border-radius:4px;background:#E8E4F6}
+.cells i.aw{background:#C9BDFB}.cells i.ov{background:var(--pink)}
+.hrs{display:grid;grid-template-columns:58px 1fr;gap:8px;font:600 11px var(--f-b);color:var(--sub)}
+.hrs div{display:flex;justify-content:space-between}
+.wins{display:grid;gap:8px;text-align:left}
+.wins div{background:var(--pink-soft);border-radius:14px;padding:12px 14px;font-weight:600}
+.wins b{font-family:var(--f-d)}
+.hrsel{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hrsel select{font-size:16px;min-height:48px;padding:10px 12px}
+.sm{font:700 13px var(--f-d);color:var(--sub)}
+@media (max-width:520px){.clocks{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body data-tool="ldr_timezone">
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="LoveCo home"><span>Love<em>Co</em></span></a>
+    <a class="btn" href="https://apps.apple.com/app/loveco/id6757470996">Get LoveCo</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="tool-head">
+      <span class="kick">Free planner · no sign-up</span>
+      <h1>Long-distance time zone planner</h1>
+      <p class="lede">Pick where you both are. See both clocks, the time difference and the best times to call when you're both awake.</p>
+    </div>
+
+    <section class="tool stk-card" aria-label="Time zone planner">
+      <div class="row2">
+        <div><label for="za">Where you are</label><select id="za"></select></div>
+        <div><label for="zb">Where they are</label><select id="zb"></select></div>
+      </div>
+      <div class="hrsel">
+        <div><span class="sm">You're awake</span><div class="row2"><select id="wa" aria-label="Your wake-up time"></select><select id="sa" aria-label="Your bedtime"></select></div></div>
+        <div><span class="sm">They're awake</span><div class="row2"><select id="wb" aria-label="Their wake-up time"></select><select id="sb" aria-label="Their bedtime"></select></div></div>
+      </div>
+      <div id="out" class="res" aria-live="polite"></div>
+    </section>
+
+    <section class="facts stk-card" aria-label="Common time differences">
+      <h2>Common long-distance time differences</h2>
+      <p>Daylight saving starts and ends on different dates in different countries, so some gaps change by an hour for a few weeks a year. The planner above always uses today's real times.</p>
+      <table>
+        <thead><tr><th>Between</th><th>Time difference</th></tr></thead>
+        <tbody>
+          <tr><td>London and New York</td><td>5 hours (4 for a few weeks in March and Oct to Nov)</td></tr>
+          <tr><td>London and Los Angeles</td><td>8 hours (7 for a few weeks a year)</td></tr>
+          <tr><td>New York and Los Angeles</td><td>3 hours</td></tr>
+          <tr><td>London and India</td><td>4.5 hours in summer, 5.5 in winter</td></tr>
+          <tr><td>London and Manila</td><td>7 hours in summer, 8 in winter</td></tr>
+          <tr><td>New York and Manila</td><td>12 hours in summer, 13 in winter</td></tr>
+          <tr><td>London and Sydney</td><td>9 to 11 hours, depending on the time of year</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="bridge stk-card" aria-label="Feel closer across time zones">
+      <h2>Say goodnight even when they're asleep.</h2>
+      <p>LoveCo shows your partner's local time in the app, and a doodle you send lands on their Home Screen widget, waiting for them when they wake up. Free on the App Store and Google Play.</p>
+      <div class="stores"><a class="appstore" href="https://apps.apple.com/app/loveco/id6757470996" aria-label="Download LoveCo on the App Store"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.62c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.47.83-.72 0-1.82-.81-2.99-.79-1.54.02-2.96.9-3.75 2.27-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 2.99.72 1.24-.02 2.02-1.12 2.77-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.1 1.76-.96 2.8 1.02.08 2.05-.52 2.69-1.28z"/></svg><span><small>Download on the</small><b>App Store</b></span></a><a class="appstore gp" href="https://play.google.com/store/apps/details?id=com.loveco" aria-label="Get LoveCo on Google Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 2.6c-.3.3-.45.75-.45 1.3v16.2c0 .55.15 1 .45 1.3l.07.07 9.08-9.08v-.2L4.27 2.53l-.07.07z"/><path d="M16.37 15.3l-3.02-3.03v-.2l3.02-3.03.07.04 3.58 2.03c1.02.58 1.02 1.53 0 2.11l-3.58 2.04-.07.04z"/><path d="M16.44 15.26L13.35 12.17 4.2 21.32c.34.36.9.4 1.53.05l10.71-6.11"/><path d="M16.44 9.08L5.73 2.98C5.1 2.62 4.54 2.67 4.2 3.03l9.15 9.14 3.09-3.09z"/></svg><span><small>Get it on</small><b>Google Play</b></span></a></div>
+    </section>
+
+    <section class="faq" aria-label="Questions">
+      <h2>Questions couples ask</h2>
+      <details class="stk-card" open><summary>What is the best time to call in a long-distance relationship?</summary><p>When you&#x27;re both awake and free. Put in both time zones and your usual wake-up and bedtimes above and the planner shows the hours that overlap, in both of your times.</p></details>
+<details class="stk-card"><summary>How do long-distance couples handle a big time difference?</summary><p>Most pick one fixed daily call in the overlap, for example your morning and their evening, and fill the rest with messages they can read later. A goodnight message timed for their bedtime goes a long way.</p></details>
+<details class="stk-card"><summary>What if our awake hours don&#x27;t overlap at all?</summary><p>Then one of you shifts a little: an early alarm twice a week, or a later night at the weekend. The planner shows how many hours you would need to move.</p></details>
+<details class="stk-card"><summary>Does the planner handle daylight saving time?</summary><p>Yes. It uses your device&#x27;s time zone data, so the times and the difference are right for today, including when one country has changed its clocks and the other hasn&#x27;t yet.</p></details>
+<details class="stk-card"><summary>Is anything I enter saved?</summary><p>No. The planner runs in your browser and saves nothing. The link in the address bar only holds the two time zones so you can bookmark or share them.</p></details>
+    </section>
+    <section class="more" aria-label="More free tools">
+      <h2>More free tools for couples</h2>
+      <ul><li><a href="/how-long-have-we-been-together/">🗓️ How long have we been together?</a></li><li><a href="/how-well-do-you-know-your-partner/">💞 How well do you know your partner?</a></li><li><a href="/monthsary-calculator/">🎂 Monthsary calculator</a></li><li><a href="/tools/">All tools</a></li></ul>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 LoveCo · Made in London</span>
+    <ul><li><a href="/">LoveCo</a></li><li><a href="/tools/">Free tools</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/support.html">Support</a></li></ul>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the best time to call in a long-distance relationship?", "acceptedAnswer": {"@type": "Answer", "text": "When you're both awake and free. Put in both time zones and your usual wake-up and bedtimes above and the planner shows the hours that overlap, in both of your times."}}, {"@type": "Question", "name": "How do long-distance couples handle a big time difference?", "acceptedAnswer": {"@type": "Answer", "text": "Most pick one fixed daily call in the overlap, for example your morning and their evening, and fill the rest with messages they can read later. A goodnight message timed for their bedtime goes a long way."}}, {"@type": "Question", "name": "What if our awake hours don't overlap at all?", "acceptedAnswer": {"@type": "Answer", "text": "Then one of you shifts a little: an early alarm twice a week, or a later night at the weekend. The planner shows how many hours you would need to move."}}, {"@type": "Question", "name": "Does the planner handle daylight saving time?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. It uses your device's time zone data, so the times and the difference are right for today, including when one country has changed its clocks and the other hasn't yet."}}, {"@type": "Question", "name": "Is anything I enter saved?", "acceptedAnswer": {"@type": "Answer", "text": "No. The planner runs in your browser and saves nothing. The link in the address bar only holds the two time zones so you can bookmark or share them."}}]}
+</script>
+<script src="/track.js?v=20261110a"></script>
+<script>
+(function(){
+var za=document.getElementById('za'), zb=document.getElementById('zb'), out=document.getElementById('out');
+var sels={wa:8,sa:23,wb:8,sb:23};
+var FALLBACK=['Europe/London','Europe/Dublin','Europe/Paris','Europe/Berlin','Europe/Madrid','Europe/Amsterdam','Europe/Stockholm','Europe/Athens','Europe/Istanbul','Africa/Lagos','Africa/Nairobi','Africa/Johannesburg','Asia/Dubai','Asia/Karachi','Asia/Kolkata','Asia/Kathmandu','Asia/Dhaka','Asia/Bangkok','Asia/Jakarta','Asia/Manila','Asia/Singapore','Asia/Hong_Kong','Asia/Shanghai','Asia/Seoul','Asia/Tokyo','Australia/Perth','Australia/Brisbane','Australia/Sydney','Pacific/Auckland','America/St_Johns','America/Halifax','America/New_York','America/Toronto','America/Chicago','America/Mexico_City','America/Denver','America/Phoenix','America/Los_Angeles','America/Vancouver','America/Anchorage','Pacific/Honolulu','America/Bogota','America/Lima','America/Sao_Paulo','America/Argentina/Buenos_Aires'];
+var Z=FALLBACK; try{if(Intl.supportedValuesOf)Z=Intl.supportedValuesOf('timeZone');}catch(e){}
+function label(z){var p=z.split('/');return p[p.length-1].replace(/_/g,' ')+' ('+p[0].replace(/_/g,' ')+')';}
+var sorted=Z.slice().sort(function(a,b){return label(a).localeCompare(label(b));});
+function fill(s){s.innerHTML=sorted.map(function(z){return '<option value="'+z+'">'+label(z)+'</option>';}).join('');}
+fill(za);fill(zb);
+var mine='Europe/London';try{mine=Intl.DateTimeFormat().resolvedOptions().timeZone||mine;}catch(e){}
+function hh(h){var d=new Date(2026,0,1,h%24);return d.toLocaleTimeString([], {hour:'numeric'});}
+['wa','sa','wb','sb'].forEach(function(id){var s=document.getElementById(id);s.innerHTML=Array.from({length:24},function(_,h){return '<option value="'+h+'">'+(id[0]==='w'?'wake ':'sleep ')+hh(h)+'</option>';}).join('');s.value=sels[id];s.onchange=render;});
+function ensure(sel,z){if(![].some.call(sel.options,function(o){return o.value===z;})){var o=document.createElement('option');o.value=z;o.textContent=label(z);sel.insertBefore(o,sel.firstChild);}sel.value=z;}
+var h=new URLSearchParams(location.hash.slice(1));
+ensure(za,h.get('a')||mine); ensure(zb,h.get('b')||(/^America\//.test(mine)?'Europe/London':'America/New_York'));
+function offsetMin(z,d){var p={};new Intl.DateTimeFormat('en-US',{timeZone:z,hourCycle:'h23',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).formatToParts(d).forEach(function(x){p[x.type]=x.value;});
+ return Math.round((Date.UTC(+p.year,+p.month-1,+p.day,+p.hour%24,+p.minute)-d.getTime())/60000);}
+function clock(z,d){return d.toLocaleTimeString([], {timeZone:z,hour:'numeric',minute:'2-digit'});}
+function day(z,d){return d.toLocaleDateString([], {timeZone:z,weekday:'long'});}
+function awake(w,s){var a=[];for(var i=0;i<24;i++){a.push(w<s?(i>=w&&i<s):(i>=w||i<s));}return a;}
+function fmtH(m){m=((m%1440)+1440)%1440;var d=new Date(2026,0,1,0,m);return d.toLocaleTimeString([], {hour:'numeric',minute:m%60?'2-digit':undefined});}
+function render(){
+ var A=za.value,B=zb.value,now=new Date(),oa=offsetMin(A,now),ob=offsetMin(B,now),diff=ob-oa;
+ var wa=+document.getElementById('wa').value,sa=+document.getElementById('sa').value,wb=+document.getElementById('wb').value,sb=+document.getElementById('sb').value;
+ var aw=awake(wa,sa), bwRaw=awake(wb,sb), bw=[]; // their awake hours, shifted into my hours
+ for(var i=0;i<24;i++){var theirMin=i*60+diff;var th=Math.floor((((theirMin%1440)+1440)%1440)/60);bw.push(bwRaw[th]);}
+ var ov=aw.map(function(x,i){return x&&bw[i];}), n=ov.filter(Boolean).length;
+ var ad=Math.abs(diff), hrs=Math.floor(ad/60), mins=ad%60;
+ var dtxt=diff===0?'You’re on the same time':((hrs?hrs+' hour'+(hrs===1?'':'s'):'')+(mins?(hrs?' ':'')+mins+' min':'')+(diff>0?' ahead of you':' behind you'));
+ var wins=[],start=-1;for(i=0;i<=24;i++){if(i<24&&ov[i]&&start<0)start=i;if((i===24||!ov[i])&&start>=0){wins.push([start,i]);start=-1;}}
+ if(wins.length>1&&wins[0][0]===0&&wins[wins.length-1][1]===24){wins[0][0]=wins[wins.length-1][0]-24;wins.pop();}
+ var wtxt=wins.length?wins.map(function(w){return '<div>📞 <b>'+fmtH(w[0]*60)+' to '+fmtH(w[1]*60)+'</b> your time = <b>'+fmtH(w[0]*60+diff)+' to '+fmtH(w[1]*60+diff)+'</b> their time</div>';}).join(''):'<div>No overlap with these hours. Try moving one wake-up or bedtime by an hour or two.</div>';
+ var bedMine=Math.floor((((sb*60-diff)%1440)+1440)%1440/60);
+ var gn='<div>🌙 Their bedtime ('+fmtH(sb*60)+' their time) is <b>'+fmtH(sb*60-diff)+'</b> your time. '+(aw[bedMine]?'Good moment for a goodnight message.':'You\u2019ll be asleep then, so send your goodnight before your own bedtime and it\u2019ll be waiting for them.')+'</div>';
+ var cells=function(arr,cls){return arr.map(function(x,i){return '<i class="'+(ov[i]?'ov':x?'aw':'')+'"></i>';}).join('');};
+ out.innerHTML='<div class="clocks"><div class="clk"><b>'+clock(A,now)+'</b><span>you · '+day(A,now)+'</span></div><div class="clk"><b>'+clock(B,now)+'</b><span>them · '+day(B,now)+'</span></div></div>'+
+  '<div class="diff">They’re '+(diff===0?'on the same time as you':dtxt)+'</div>'+
+  '<div class="grid"><div class="lane"><span>You</span><div class="cells">'+cells(aw)+'</div></div><div class="lane"><span>Them</span><div class="cells">'+cells(bw)+'</div></div><div class="hrs"><span></span><div><span>'+hh(0)+'</span><span>'+hh(6)+'</span><span>'+hh(12)+'</span><span>'+hh(18)+'</span><span>'+hh(23)+'</span></div></div><p class="sm">Your day, hour by hour. Pink = you’re both awake ('+n+' hour'+(n===1?'':'s')+').</p></div>'+
+  '<div class="wins">'+wtxt+gn+'</div>';
+ try{history.replaceState(null,'','#a='+encodeURIComponent(A)+'&b='+encodeURIComponent(B));}catch(e){}
+}
+var tracked=false; function onZ(){render();if(!tracked){tracked=true;lcTrack('tz_planner_used',{});}}
+za.onchange=onZ;zb.onchange=onZ;render();setInterval(render,30000);
+})();
+</script>
+</body>
+</html>

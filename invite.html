@@ -45,12 +45,21 @@
   var t = new URLSearchParams(location.search).get("t") || "";
   if (!/^[A-Za-z0-9]{6,16}$/.test(t)) t = "";
   var link = t ? "https://getloveco.com/pair/" + t : "";
-  // invite_link_opened (web, MEASUREMENT.md). Counts only: no names, no content.
-  try {
-    fetch("https://us.i.posthog.com/capture/", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
-      body: JSON.stringify({ api_key: "phc_rEZVZE4tebhaqsbaAHk4pAmu4sqx43abPQZCAMueVZCg", event: "invite_link_opened",
-        distinct_id: "web-" + (t || "none"), properties: { has_token: !!t, device_os: /Android/i.test(navigator.userAgent || "") ? "android" : /iPhone|iPad|iPod/i.test(navigator.userAgent || "") ? "ios" : "other", $current_url: location.origin + location.pathname } }) });
-  } catch (e) {}
+  // invite_link_opened (web, MEASUREMENT.md). Counts only: no names, no content. 4.1.1 (T035): invite_ref (first 12 hex of SHA-256 of
+  // the token, as the apps and the invite page function) joins it to the inviter's invite_shared and the joiner's events; the token
+  // itself no longer goes to PostHog (it was the distinct_id).
+  function send(ref) {
+    try {
+      fetch("https://us.i.posthog.com/capture/", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
+        body: JSON.stringify({ api_key: "phc_rEZVZE4tebhaqsbaAHk4pAmu4sqx43abPQZCAMueVZCg", event: "invite_link_opened",
+          distinct_id: "web-" + (ref || "none"), properties: { has_token: !!t, invite_ref: ref, page: "static", device_os: /Android/i.test(navigator.userAgent || "") ? "android" : /iPhone|iPad|iPod/i.test(navigator.userAgent || "") ? "ios" : "other", $current_url: location.origin + location.pathname } }) });
+    } catch (e) {}
+  }
+  if (t && window.crypto && crypto.subtle && window.TextEncoder) {
+    crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)).then(function (b) {
+      send(Array.prototype.map.call(new Uint8Array(b), function (x) { return ("0" + x.toString(16)).slice(-2); }).join("").slice(0, 12));
+    }).catch(function () { send(null); });
+  } else { send(null); }
   var open = document.getElementById("open");
   if (!t) open.parentNode.style.display = "none";
   // Custom scheme (a universal link tapped on its own domain just reloads this page). Without the app

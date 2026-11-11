@@ -105,7 +105,7 @@
             }).catch(function () {});
         }
         // Small delay so the copy lands before we leave the page.
-        setTimeout(function () { location.href = APP_STORE; }, 350);
+        setTimeout(function () { location.href = /Android/i.test(navigator.userAgent || "") ? "https://play.google.com/store/apps/details?id=com.loveco" : APP_STORE; }, 350);
     });
 })();
 </script>

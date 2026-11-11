@@ -49,7 +49,7 @@
   try {
     fetch("https://us.i.posthog.com/capture/", { method: "POST", headers: { "Content-Type": "application/json" }, keepalive: true,
       body: JSON.stringify({ api_key: "phc_rEZVZE4tebhaqsbaAHk4pAmu4sqx43abPQZCAMueVZCg", event: "invite_link_opened",
-        distinct_id: "web-" + (t || "none"), properties: { has_token: !!t, $current_url: location.origin + location.pathname } }) });
+        distinct_id: "web-" + (t || "none"), properties: { has_token: !!t, device_os: /Android/i.test(navigator.userAgent || "") ? "android" : /iPhone|iPad|iPod/i.test(navigator.userAgent || "") ? "ios" : "other", $current_url: location.origin + location.pathname } }) });
   } catch (e) {}
   var open = document.getElementById("open");
   if (!t) open.parentNode.style.display = "none";
@@ -60,7 +60,13 @@
     location.href = "loveco://pair/" + t;
     setTimeout(function () { if (!document.hidden) document.getElementById("first").style.display = "block"; }, 1500);
   });
+  // Android: go to Google Play and carry the invite in the install referrer. The Android app reads
+  // "pair=<token>" on first launch (InstallReferrer.kt), the same job the clipboard does on iPhone.
+  var ANDROID = /Android/i.test(navigator.userAgent || "");
+  var PLAY = "https://play.google.com/store/apps/details?id=com.loveco" + (t ? "&referrer=" + encodeURIComponent("pair=" + t) : "");
+  if (ANDROID) document.getElementById("copied").textContent = "Your invite comes with you, so LoveCo opens it after installing.";
   document.getElementById("get").addEventListener("click", function () {
+    if (ANDROID) { location.href = PLAY; return; }
     var go = function () { location.href = APP_STORE; };
     if (link && navigator.clipboard) {
       navigator.clipboard.writeText(link).then(function () {
